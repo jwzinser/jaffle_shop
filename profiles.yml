@@ -1,0 +1,20 @@
+ecommerce_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'ecommerce.duckdb'
+      threads: 4
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      threads: 16
+      account: DMORCMS-QN65137
+      user: JUANZINSER@GMAIL.COM
+      database: analytics
+      warehouse: transforming
+      schema: dbt_juanzinser
+      private_key_path: /Users/juanzinser/rsa_key.p8
+      role: accountadmin
